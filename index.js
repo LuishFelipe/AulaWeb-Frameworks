@@ -28,12 +28,12 @@ client.connect(function (err) {
 app.get("/", (request, response) => {
     console.log("Response ok");
     response.send({ Message: "OK" })
-})
+});
 
 app.get("/usuarios", (req, res) => {
     try {
         client.query("SELECT * FROM Usuarios", function
-            (err, result) {
+        (err, result) {
             if (err) {
                 return console.error("Erro ao executar a qry de SELECT", err);
             }
